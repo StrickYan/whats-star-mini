@@ -72,6 +72,16 @@ Page({
                 icon: 'success'
               })
             }
+          },
+          fail: function () {
+            // 关闭 loading 动画
+            that.setData({
+              loadingHidden: true
+            });
+            wx.showToast({
+              title: 'Sorry, please try again.',
+              icon: 'success'
+            })
           }
         })
       }
