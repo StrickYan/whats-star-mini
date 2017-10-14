@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    motto: '点击头像选择图片上传',
+    motto: '点击头像进行人脸识别',
     userInfo: {},
     Industry: {},
     tmpFilePaths: '',

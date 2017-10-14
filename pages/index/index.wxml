@@ -9,18 +9,18 @@
   </view>
 </view>
 <loading hidden="{{loadingHidden}}">
-	加载中...
+	识别中...
 </loading>
   <!--<button class="btn-choose-img" type="default" bindtap="upload"> choose a photo </button>-->
 
-<view wx:if="{{condition}}"> 
-  <image src="{{tmpFilePaths }}" mode="aspectFit"/>
+<view wx:if="{{condition}}" id='my_pic'> 
+  <image src="{{tmpFilePaths }}" mode="widthFix"/>
 </view>
 <view wx:if="{{condition}}" class="result-tips"> 
-  匹配结果：
+  识别结果：
 </view>
 <view wx:for="{{Industry}}" wx:key="{{index}}" class="flow">
-  <image src="http://www.eyekey.com{{item.url}}" mode="aspectFit"></image>
+  <image src="http://www.eyekey.com{{item.url}}" mode="widthFix"></image>
   <view class="user-name"> {{item.people_name}} </view>
   <view class="similar"> 
     相似度：{{item.similarity}}% 

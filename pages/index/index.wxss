@@ -23,6 +23,7 @@
 .btn-choose-img {
   margin: 20rpx;
 }
+
 .result-tips {
   text-align: center;
   padding-top: 20rpx;
@@ -31,6 +32,7 @@
   background-color: #f0f0f0;
   border-radius: 5px;
 }
+
 .flow {
   border-bottom: 1px solid #eee;
   text-align:center;
@@ -39,7 +41,7 @@
 }
 
 .user-name {
-  display: inline-block;
+  display: block;
   color: rgb(41, 128, 185);
   font-size: 12px;
 }
@@ -49,4 +51,8 @@
   display: inline-block;
   color: #aaa;
   font-size: 12px;
+}
+
+#my_pic {
+  text-align: center;
 }
