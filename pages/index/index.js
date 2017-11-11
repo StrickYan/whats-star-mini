@@ -43,7 +43,7 @@ Page({
           loadingHidden: false
         });
         wx.uploadFile({
-          url: 'https://www.classmateer.com/WhatsStar/FaceMatch.php', //仅为示例，非真实的接口地址
+          url: 'https://www.classmateer.com/WhatsStar/FaceMatch.php', // 接口地址
           filePath: tempFilePaths[0],
           name: 'upfile',
           formData: {
@@ -53,24 +53,22 @@ Page({
             // 关闭 loading 动画
             that.setData({
               loadingHidden: true,
-              condition: true
             });
             var ret = JSON.parse(res.data)//字符串转对象
             console.log(ret)
             //do something
             if (ret.res_code == "0000") {
               that.setData({
-                tmpFilePaths: tempFilePaths
-              })
-              that.setData({
+                condition: true,
+                tmpFilePaths: tempFilePaths,
                 Industry: ret.result
-              })
+              });
             }
             else {
               wx.showToast({
-                title: 'Sorry, please try again.',
+                title: ret.message,
                 icon: 'success'
-              })
+              });
             }
           },
           fail: function () {
@@ -92,7 +90,7 @@ Page({
   getSimilarStar: function () {
     var that = this
     wx.request({
-      url: 'https://www.classmateer.com/WhatsStar/FaceMatch.php',//上线的话必须是https，没有appId的本地请求貌似不受影响  
+      url: 'https://www.classmateer.com/WhatsStar/FaceMatch.php',// 上线的话必须是https，没有appId的本地请求貌似不受影响  
       data: {
         'url': "https://imgsa.baidu.com/baike/s%3D500/sign=89fc6048d0ca7bcb797bc72f8e0b6b3f/96dda144ad3459824945bc190bf431adcaef846a.jpg"
       },
