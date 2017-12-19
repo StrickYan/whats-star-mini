@@ -26,3 +26,5 @@
     相似度：{{item.similarity}}%
   </view>
 </view>
+
+<view id="footer">@编程界的小透明</view>
