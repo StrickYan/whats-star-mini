@@ -8,17 +8,19 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
 <loading hidden="{{loadingHidden}}">
   识别中...
 </loading>
-<!--<button class="btn-choose-img" type="default" bindtap="upload"> choose a photo </button>-->
 
 <view wx:if="{{condition}}" id='my_pic'>
   <image src="{{tmpFilePaths }}" mode="widthFix" />
 </view>
+
 <view wx:if="{{condition}}" class="result-tips">
   识别结果：
 </view>
+
 <view wx:for="{{Industry}}" wx:key="{{index}}" class="flow">
   <image src="http://www.eyekey.com{{item.url}}" mode="widthFix"></image>
   <view class="user-name"> {{item.people_name}} </view>
@@ -27,4 +29,4 @@
   </view>
 </view>
 
-<view id="footer">@编程界的小透明</view>
+<view wx:if="{{!condition}}" id="footer">@编程界的小透明</view>
