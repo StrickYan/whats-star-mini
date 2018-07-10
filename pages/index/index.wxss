@@ -18,7 +18,7 @@
 }
 
 .usermotto {
-  margin-top: 400rpx;
+  margin-top: 300rpx;
 }
 
 .btn-choose-img {
@@ -67,4 +67,15 @@
   line-height: 20px;
   font-size: 12px;
   color: #999;
+}
+
+.offer {
+  padding: 20rpx;
+}
+
+#offer_footer {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 96%;
 }
