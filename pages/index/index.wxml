@@ -1,8 +1,10 @@
 <!--index.wxml-->
 <view class="container">
   <view bindtap="upload" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+    <open-data type="userNickName" class="userinfo-nickname"></open-data>
   </view>
   <view wx:if="{{!condition}}" class="usermotto">
     <text class="user-motto">{{motto}}</text>
@@ -21,7 +23,7 @@
   识别结果：
 </view>
 
-<view wx:if="{{condition}}" class="offer">
+<view wx:if="{{condition}}" class="offer" id='banner_2'>
   <ad unit-id="adunit-6e29001c7570fb21"></ad>
 </view>
 
@@ -35,10 +37,12 @@
 
 <view wx:if="{{condition}}" class="offer">
   <ad unit-id="adunit-408f905f3b37ad91"></ad>
+  <view class='empty-line'></view>
   <ad unit-id="adunit-617d2771898684c3"></ad>
+  <view class='empty-line'></view>
 </view>
 
-<view wx:if="{{!condition}}" id="offer_footer">
+<view wx:if="{{!condition}}" class="offer" id="offer_footer">
   <ad unit-id="adunit-f1ae7bb9659afa92"></ad>
 </view>
 <!-- <view wx:if="{{!condition}}" id="footer">@编程界的小透明</view> -->

@@ -2,3 +2,6 @@
 
 WhatsStar/upload/*
 project.config.json
+
+*.idea/
+

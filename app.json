@@ -1,14 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WhatsStar",
-    "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":"true",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
     "backgroundColor": "#eeeeee"
   }
 }

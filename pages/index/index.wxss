@@ -10,7 +10,7 @@
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .userinfo-nickname {
@@ -27,9 +27,11 @@
 
 .result-tips {
   text-align: center;
-  padding-top: 20rpx;
+  /* padding-top: 20rpx;
   padding-bottom: 20rpx;
-  margin: 40rpx 10px;
+  margin: 40rpx 10px 20rpx 10rpx; */
+  margin: 20rpx;
+  line-height: 40px;
   background-color: #f0f0f0;
   border-radius: 5px;
 }
@@ -37,8 +39,12 @@
 .flow {
   border-bottom: 1px solid #eee;
   text-align: center;
-  margin: 0 0 20rpx 0;
+  margin: 20rpx 0;
   padding-bottom: 20rpx;
+}
+
+#my_pic image, .flow image {
+  border-radius: 10px;
 }
 
 .user-name {
@@ -70,12 +76,25 @@
 }
 
 .offer {
-  padding: 20rpx;
+  margin: 20rpx;
+}
+
+.offer ad {
+  border-radius: 10px;
 }
 
 #offer_footer {
+  margin: 0;
   position: absolute;
   bottom: 2%;
   left: 2%;
   width: 96%;
+}
+
+.empty-line {
+  height: 20rpx;
+}
+
+#banner_2 {
+  margin: 40rpx 20rpx;
 }
