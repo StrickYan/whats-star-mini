@@ -82,6 +82,6 @@ if ($upload_result === false) {
     exit;
 }
 
-$img_url = "http://www.beishanwen.com/WhatsStar/upload/" . $upload_result;
+$img_url = "https://www.beishanwen.com/WhatsStar/upload/" . $upload_result;
 $obj_face_match = new FaceMatch();
 $obj_face_match->getSimilarStar($img_url);
