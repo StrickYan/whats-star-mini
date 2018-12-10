@@ -1,5 +1,9 @@
 /**index.wxss**/
 
+.container {
+  padding: 100rpx 0;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -18,7 +22,7 @@
 }
 
 .usermotto {
-  margin-top: 300rpx;
+  margin-top: 150rpx;
 }
 
 .btn-choose-img {
@@ -89,6 +93,11 @@
   bottom: 2%;
   left: 2%;
   width: 96%;
+}
+
+#offer_footer image {
+  border-radius: 10px;
+  width: 100%;
 }
 
 .empty-line {

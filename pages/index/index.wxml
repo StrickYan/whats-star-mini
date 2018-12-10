@@ -1,10 +1,11 @@
 <!--index.wxml-->
 <view class="container">
-  <view bindtap="upload" class="userinfo">
-    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
-    <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
-    <open-data type="userNickName" class="userinfo-nickname"></open-data>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="upload" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
   <view wx:if="{{!condition}}" class="usermotto">
     <text class="user-motto">{{motto}}</text>
@@ -16,7 +17,7 @@
 </loading>
 
 <view wx:if="{{condition}}" id='my_pic'>
-  <image src="{{tmpFilePaths }}" mode="widthFix" />
+  <image src="{{imgUrl }}" mode="widthFix" />
 </view>
 
 <view wx:if="{{condition}}" class="result-tips">
@@ -28,7 +29,7 @@
 </view>
 
 <view wx:for="{{Industry}}" wx:key="{{index}}" class="flow">
-  <image src="http://www.eyekey.com{{item.url}}" mode="widthFix"></image>
+  <image src="{{item.url}}" mode="widthFix"></image>
   <view class="user-name"> {{item.people_name}} </view>
   <view class="similar">
     相似度：{{item.similarity}}%
@@ -43,6 +44,7 @@
 </view>
 
 <view wx:if="{{!condition}}" class="offer" id="offer_footer">
+  <image src="/image/whats-story.png" mode="widthFix" bindtap='toWhatsStory'></image>
   <ad unit-id="adunit-f1ae7bb9659afa92"></ad>
 </view>
 <!-- <view wx:if="{{!condition}}" id="footer">@编程界的小透明</view> -->

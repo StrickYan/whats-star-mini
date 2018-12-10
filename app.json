@@ -8,7 +8,9 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WhatsStar",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true,
     "backgroundColor": "#eeeeee"
-  }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxb7165086782dd980"
+  ]
 }
