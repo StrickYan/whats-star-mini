@@ -37,14 +37,14 @@
 </view>
 
 <view wx:if="{{condition}}" class="offer">
-  <ad unit-id="adunit-408f905f3b37ad91"></ad>
-  <view class='empty-line'></view>
+  <!-- <ad unit-id="adunit-408f905f3b37ad91"></ad>
+  <view class='empty-line'></view> -->
   <ad unit-id="adunit-617d2771898684c3"></ad>
   <view class='empty-line'></view>
 </view>
 
 <view wx:if="{{!condition}}" class="offer" id="offer_footer">
   <image src="/image/whats-story.png" mode="widthFix" bindtap='toWhatsStory'></image>
-  <ad unit-id="adunit-f1ae7bb9659afa92"></ad>
+  <!-- <ad unit-id="adunit-f1ae7bb9659afa92"></ad> -->
 </view>
 <!-- <view wx:if="{{!condition}}" id="footer">@编程界的小透明</view> -->
